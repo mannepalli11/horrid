@@ -3,24 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
+    <title>Venkatesh's Restaurant</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background: #fff5e6;
             margin: 0;
+            padding: 0;
         }
-        h1 {
-            color: #3333cc;
+        header {
+            background-color: #ff704d;
+            color: white;
+            padding: 20px;
             text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .order-summary {
+            margin-top: 20px;
+            background: #ffe0cc;
+            padding: 15px;
+            border-radius: 8px;
         }
     </style>
 </head>
 <body>
-    <h1>Hi, my name is Venkatesh</h1>
-</body>
-</html>
+    <header>
+        <h1>Venkatesh's Restaurant</h1>
+        <p>Choose your meal and enjoy!</p>
+    </header>
+    
+    <main>
+        <h2>Menu</h2>
+        
+        <label for="mainDish">Select a Main Dish:</label>
+        <select id="mainDish">
+            <option value="">--Choose--</option>
+            <option value="Pizza">Pizza - $10</option>
+            <option value="Burger">Burger - $8</option>
+            <option value="Pasta">Pasta - $9</option>
+        </select>
+        <br>
+
+        <label for="drink">Select a Drink:</label>
+        <select id="drink">
+            <option value="">--Choose--</option>
+            <option value="Coke">Coke - $2</option>
+            <option value="Juice">Juice - $3</option>
+            <option value="Water">Water - $1</option>
+        </select>
+        <br>
+
+        <button onclick="placeOrder()">Place Order</button>
+
+        <div class="order-summary" id="
